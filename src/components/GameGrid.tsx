@@ -9,6 +9,10 @@ interface Props {
   gameQuery: GameQuery;
 }
 
+
+
+
+
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
   const Skeletons = [1, 2, 3, 4, 5, 6];
@@ -20,7 +24,7 @@ const GameGrid = ({ gameQuery }: Props) => {
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         padding="14px"
-        spacing={3}
+        spacing={6}
       >
         {isLoading &&
           Skeletons.map((Skeleton) => (
